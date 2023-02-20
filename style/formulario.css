@@ -1,0 +1,96 @@
+*{
+    padding: 10px 20px 20px 20px;
+}
+
+.volver{
+	font-size: 30px;
+}
+
+.h1{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.titulo{
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 30px;
+}
+
+.form-container {
+	display: flex;
+	/* flex-direction: row; */
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+form {
+	width: 50%;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], select {
+	padding: 10px;
+	margin: 10px;
+	width: 100%;
+	border: 1px solid gray;
+	border-radius: 5px;
+	font-size: 16px;
+	font-family: sans-serif;
+	color: #333;
+	background-color: #fff;
+	box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+	outline: none;
+}
+
+input[type="submit"] {
+	padding: 10px;
+	margin: 10px;
+	width: 30%;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	font-family: sans-serif;
+	color: #fff;
+	background-color: #0e942f;
+	box-shadow: 0;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+input[type="submit"]:active {
+    background-color: #09ee3b; /* Color de fondo cuando se hace clic */
+    box-shadow: 0 5px #74ee9d; /* Efecto de sombra */
+    transform: scale(0.9);
+}
+
+.pagar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensaje {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #1b8f55;
+	/* padding: 20px; */
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	z-index: 9999;
+	color: #fff;
+}
+
+.mostrar {
+	display: block;
+	animation: mostrar-mensaje 2s;
+}
+@keyframes mostrar-mensaje {
+	0% { opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1; }
+	100% { opacity: 0; }
+}
+

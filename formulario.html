@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Formulario de Pago</title>
+	<link rel="stylesheet" type="text/css" href="./style/formulario.css">
+</head>
+<body>
+	<div class="volver">
+		<a href="./sos.html">Atras</a>
+	</div>
+	<div class="h1">
+		<div class="titulo">QUIERO SER RICO</div>
+	</div>
+	
+	<div class="form-container">
+		<form>
+			<label class="lab" for="nombre">Nombre completo:</label>
+			<input class="info" type="text" id="nombre" name="nombre" placeholder="Nombre completo">
+
+			<label class="lab" for="correo">Correo electrónico:</label>
+			<input class="info" type="email" id="correo" name="correo" placeholder="Correo electrónico">
+
+			<label class="lab" for="telefono">Teléfono:</label>
+			<input class="info" type="tel" id="telefono" name="telefono" placeholder="Teléfono">
+
+			<label for="pais">País:</label>
+			<select class="info" id="pais" name="pais">
+				<option value="Argentina">Argentina</option>
+				<option value="Bolivia">Bolivia</option>
+				<option value="Chile">Chile</option>
+				<option value="Colombia">Colombia</option>
+				<option value="Ecuador">Ecuador</option>
+				<option value="Perú">Perú</option>
+				<option value="Uruguay">Uruguay</option>
+				<option value="Venezuela">Venezuela</option>
+			</select>
+		</form>
+
+		<form>
+			<label class="lab" for="tarjeta">Número de tarjeta de crédito:</label>
+			<input class="info" type="text" id="tarjeta" name="tarjeta" placeholder="Número de tarjeta de crédito">
+
+			<label class="lab" for="vencimiento">Fecha de vencimiento (MM/AA):</label>
+			<input class="info" type="text" id="vencimiento" name="vencimiento" placeholder="MM/AA">
+
+			<label class="lab" for="cvv">Código de seguridad (CVV):</label>
+			<input class="info" type="text" id="cvv" name="cvv" placeholder="Código de seguridad (CVV)">
+
+			<label class="lab" for="direccion">Dirección:</label>
+			<input class="info" type="text" id="direccion" name="direccion" placeholder="Dirección">
+		</form>
+	</div>
+
+    <div class="pagar">
+        <input class="paga" id="paga" type="submit" value="Pagar">
+    </div>
+
+    <div class="mensaje" id="mensaje">
+			<p class="visible" id="mostrar">pago con exito</p>
+	</div>
+	<script src="./javascript/formulario.js"></script>
+</body>
+</html>
