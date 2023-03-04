@@ -1,0 +1,76 @@
+.ruleta {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 10px solid black;
+  overflow: hidden;
+}
+
+.ruleta-opcion {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ruleta-opcion:nth-child(odd) {
+  background-color: #fceade;
+}
+
+.ruleta-opcion:nth-child(even) {
+  background-color: #f9d9b8;
+}
+
+.ruleta-opcion:first-child {
+  transform: rotate(-11.25deg);
+}
+
+.ruleta-opcion:last-child {
+  transform: rotate(348.75deg);
+}
+
+.ruleta-indicador {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.ruleta-centro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: black;
+  z-index: 10;
+}
+
+.boton {
+  display: block;
+  margin: 30px auto 0;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.boton:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
