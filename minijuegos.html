@@ -3,50 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiniJuegos</title>
+    <title>PRUEBA</title>
     <link rel="stylesheet" href="./style/minijuegos.css">
+    <link rel="shortcut icon" href="./img/iconMeme.png" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <a href="">Ruleta</a>
-        <a href="">Michi</a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-    </header>
-    <div class="container">
-        <div class="ruleta">
-            <div class="ruleta-opcion">A</div>
-            <div class="ruleta-opcion">B</div>
-            <div class="ruleta-opcion">C</div>
-            <div class="ruleta-opcion">D</div>
-            <div class="ruleta-opcion">E</div>
-            <div class="ruleta-opcion">F</div>
-            <div class="ruleta-opcion">G</div>
-            <div class="ruleta-opcion">H</div>
-            <div class="ruleta-opcion">I</div>
-            <div class="ruleta-opcion">J</div>
-            <div class="ruleta-opcion">K</div>
-            <div class="ruleta-opcion">L</div>
-            <div class="ruleta-opcion">M</div>
-            <div class="ruleta-opcion">N</div>
-            <div class="ruleta-opcion">O</div>
-            <div class="ruleta-opcion">P</div>
-            <div class="ruleta-opcion">Q</div>
-            <div class="ruleta-opcion">R</div>
-            <div class="ruleta-opcion">S</div>
-            <div class="ruleta-opcion">T</div>
-            <div class="ruleta-opcion">U</div>
-            <div class="ruleta-opcion">V</div>
-            <div class="ruleta-opcion">W</div>
-            <div class="ruleta-opcion">X</div>
-            <div class="ruleta-opcion">Y</div>
-            <div class="ruleta-opcion">Z</div>
-            <div class="ruleta-opcion">Te quiero</div>
-            <div class="ruleta-indicador">inicio</div>
-            <div class="ruleta-centro"></div>
+    <header class="container-header">
+        <div class="container-bar-nav">
+            <div class="container-logo">
+                <img src="./img/iconMeme.png" alt="">
+            </div>
+            <div class="container-busqueda">
+                <input type="text" placeholder="Esto aun no funciona wey ._.">
+                <button><img src="./img/lupa.png" alt=""></button>
+            </div>
+            <nav class="container-enlaces">
+                <ul>
+                    <li><a href="https://wa.me/+51948747296?text=No%20tengo%20sugerencias%20para%20ti,%20tu%20mente%20esta%20mas%20allá%20de%20mi%20entendimiento,%20como%20ser%20inferior%20no%20me%20es%20permitido%20pensar." target="_blank">Sugerencias 
+                        <img src="./img/whatsapp.png" alt="">
+                    </a></li>
+                    <li><a href="./cuestion.html">Mas jueguitos</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
+    <main class="container-main">
+        <div class="container-volver">
+            <div class="volver">
+            <a href="./cuestion.html">Atrás</a>
+        </div>
+        <div class="volver volver1">
+            <a href="https://wa.me/+51948747296?text=No%20tengo%20sugerencias%20para%20ti,%20tu%20mente%20esta%20mas%20allá%20de%20mi%20entendimiento,%20como%20ser%20inferior%20no%20me%20es%20permitido%20pensar.">whatsapp</a>
+        </div>
+        </div>
+        
+        <section class="container-main-section">
+            <div class="audio-container">
+                <img src="./img/gifFlecha.gif" alt="" class="animacion">
+                <button id="miBoton" onclick="playAudio()">No precionar</button>
+                <audio id="miAudio" src="./audio/audioWEB.mp3"></audio>
+            </div>
+            <div class="caja1">
+                <h2>Test para comprobar si tus chistes son buenos o malos a traves de nuestra poderosa IA</h2>
+                <div class="container-section-text">
+                    <h3>Cuenta tu chiste chistoso</h3>
+                    <textarea id="chiste" class="chiste" name="mi-textarea" rows="4" cols="50"></textarea>
+                    <br>
+                    <br>
+                    <button id="enviar" class="enviar" type="button" value="Enviar" onclick="mostrarCaja()">Enviar</button><br>
+                    <br>
+                    <br>
+                    <div class="carga" id="carga">
+                        <div class="text">
+                            <h4>Tu chiste se esta analizando...</h4>
+                        </div>
+                        <div class="contenedor-barra">
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" id="progress-bar"></div>
+                                <div class="progress-percentage" id="progress-percentage">0%</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="video-overlay" id="video-overlay">
+                        <video id="video">
+                            <source src="./video/chiste1.mp4" type="video/mp4">
+                            <source src="./video/llamadacirco.mp4" type="video/mp4">
+                            <source src="./video/ranariendo.mp4" type="video/mp4">
+                            <source src="./video/chiste3.mp4" type="video/mp4">
+                            <source src="./video/chiste4.mp4" type="video/mp4">
+                            <source src="./video/chiste5.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="icon-container">
+                <br>
+                <p style="color: #fff;">Sugerencias</p>
+                <a href="https://wa.me/+51948747296?text=No%20tengo%20sugerencias%20para%20ti%20tu%20mente%20esta%20mas%20allá%20de%20mi%20entendimiento,%20como%20ser%20inferior%20no%20me%20es%20permitido%20pensar." target="_blank">
+                    <img class="icon-whatsapp" src="./img/whatsapp.png" alt="">
+                </a>
+            </div> -->
+        </section>
+        
+    </main>
+    <footer>
+
+    </footer>
     <script src="./javascript/minijuegos.js"></script>
 </body>
 </html>

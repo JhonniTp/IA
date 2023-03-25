@@ -36,6 +36,7 @@
 var pasadoBtn = document.getElementById("pasado");
 var presenteBtn = document.getElementById("presente");
 var futuroBtn = document.getElementById("futuro");
+var chisteBtn = document.getElementById("chiste");
 var videoContainer = document.getElementById("video-container");
 var video = document.getElementById("video");
 var videoReproducido = false;
@@ -51,6 +52,10 @@ presenteBtn.addEventListener("click", function() {
 futuroBtn.addEventListener("click", function() {
   reproducirVideo("./video/WhatsApp Video 2023-02-17 at 6.34.48 PM.mp4", "./futuro.html");
 });
+
+chisteBtn.addEventListener("click", function(){
+  reproducirVideo("./video/WhatsApp Video 2023-02-17 at 6.34.48 PM.mp4", "./minijuegos.html");
+})
 
 video.addEventListener("ended", function() {
   window.location.href = video.dataset.redirectUrl;
