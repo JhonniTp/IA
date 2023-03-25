@@ -163,7 +163,7 @@ nav ul li {
 }
 body{
   background-color: #000;
-  background-image: url(/img/fondWEB2.png);
+  background-image: url("/img/fondWEB2.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -375,7 +375,7 @@ body{
 }
 @media (max-width: 720px) {
   body{
-    background-image: url(/img/movilPayaso1.jpg);
+    background-image: url("/img/movilPayaso1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     backdrop-filter: blur(5px);
